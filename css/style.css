@@ -19,7 +19,7 @@ body {
     background-color: #ffff;  
     margin: 200px auto;
     width: 70%;
-    height: 550px;
+    height: auto;
 }
 
 .tarefa__titulo {
@@ -28,22 +28,36 @@ body {
 }
 
 .lista-tarefa__input{
-    width: 100%;
+    width: 90%;
     height: 100px;
     border: 1px solid rgb(207, 207, 207); 
+    font-size: 14px;
 }
 
 ::placeholder{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
-    text-align: center;
+    text-align: center;  
 }
 
 /* responsivo-tarefas */
+@media (min-width: 500px){
+    .container {
+        width: 60%;
+        height: auto;
+    }
+}   
+
+@media (min-width: 600px){
+    .container {
+        width: 50%;
+        height: auto;
+    }
+} 
 @media (min-width: 768px){
     .container {
         width: 40%;
-        height: 600px;
+        height: auto;
     }
     .tarefa__titulo {
         font-size: 16px;
@@ -55,32 +69,83 @@ body {
         font-size: 16px;
     }
 }
-
-@media (min-width: 1280px) {
-    .container {
-        width: 30%;
-        height: 600px;
-    }
-}
-
 /* botao */
-.tarefa__botao{
-    background-color: #ba7af8;
-    font-size: 14px;
+
+.btn {
+    font-size: 12px;
     color: #ffff;
     text-transform: uppercase;
-    margin-top: 5px;
+    margin: 10px 8px;
     border-radius: 5px;
     font-weight: 700;
-    padding: 10px 50px;
+    padding: 5px;
     border: 0;
+    cursor: pointer;
+}  
+
+.botao__enviar{
+    background-color: #ba7af8;
+}
+
+.botao__deletar-tudo{
+    background-color: rgb(219, 157, 157);
+}
+
+.botao__deletar-tudo:hover{
+    background-color:rgb(214, 71, 71);
+    transition: 0.3s;
+}
+
+.botao__selecionar-tudo{
+    background-color: rgb(166, 207, 166);
+}
+
+.botao__selecionar-tudo:hover{
+    background-color: rgb(46, 116, 46);
+    transition: 0.3s;
 }
 
 @media (min-width: 768px){
-    .tarefa__botao{
-        font-size: 12px;
+    .btn{
+        font-size: 14px;
         font-weight: 600;
+        padding: 5px 15px;
     }
+}   
+
+/* botao excluir */
+.botao__excluir{
+    color: rgb(88, 86, 86);
+    border: 0;
+    font-size: 26px;
+    cursor: pointer;
 }
+
+/* iten do input */
+.tarefa__itens {
+  display: none;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  padding: 15px;
+  justify-content: space-between;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+  
+}
+
+.tarefa__itens-checked{
+  text-decoration: line-through;
+  color: gray;
+  border-bottom: 1px solid rgb(207, 207, 207); 
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+} 
+   
+
+
+
+
 
 

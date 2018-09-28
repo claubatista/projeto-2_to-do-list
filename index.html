@@ -9,24 +9,27 @@
 </head>
 <body>
    <div class= "container">
-        <div class= "tarefa__titulo">
+        <div class="tarefa__titulo">
              <h3> Adicione uma nova tarefa </h3> 
         </div>
-
         <div class="tarefa__input"> 
-            <input type="text" class="lista-tarefa__input" id="listaTarefaInput" placeholder="Nova tarefa">
+            <textarea class="lista-tarefa__input" id="listaTarefaInput" placeholder="Nova tarefa" rows="7" cols="45"></textarea>
         </div>
 
         <div>
-            <button class="tarefa__botao">Add</button>
+            <button class="btn botao__enviar">Add</button>
         </div>
+
      <div class="tarefa__caixa"> 
         <div class="tarefa__itens">
-            <p>Descrição das tarefas </p>
-            <!-- <button class="botao__excluir">&times;</button> -->
+            <p>Descricao da tarefa</p>
+        </div>
+    </div>
+        <div>
+            <button class="btn botao__deletar-tudo">Excluir tudo</button>
+            <button class="btn botao__selecionar-tudo">Selecionar tudo</button>
         </div>
     </div>      
-   </div>
    <script src="script/script.js"></script>   
 </body>
 </html>
