@@ -29,6 +29,7 @@ const itens = document.createElement("div");
     tarefaCaixa.appendChild(itens);
     itens.style.display = "flex";
 
+//drag and drop    
 itens.addEventListener("dragstart", function(drag){
     drag.dataTransfer.setData("text", drag.target.id)
 }) 
